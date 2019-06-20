@@ -1,109 +1,5 @@
-def back():
-
-    c =h= eval(input('Please enter the year you wish to return:'))
-    
-# c can only be in the range of 1900-2100 and represents the year
-
-    while (c <1900) or (c>2100):
-           c = eval(input('Please enter the year you wish to return: '))
-    
-# a represents the month
-# a == 1 is March, a == 2 is April... etc
-
-    a = eval(input('Please enter the month you want to return: '))
-    while (a > 12) or (a < 1):
-           a = eval(input('Please enter the month you want to return:'))
-# b = the calander date #
-    
-    b = eval(input('Please enter the day of the month you want to return: '))
-
-
-#Determine if there is a leap year
-    
-
-# Ex: 1929, C = 29, d = 19
-
-    leap = (c% 4 == 0) or (c% 400 != 0 and (c%100 == 0))
-
-# calculate months
-
-    num_days = 0
-    
-    if a< 3:
-        a += 10
-    else:
-        a-= 2
-        
-    if (a == 1) or (a == 3) or (a == 5) or (a == 6) or (a == 7) or (a == 8) or (a ==10) or (a == 12):
-            num_days = 31
-            
-    elif ( a == 12 and leap == 0):
-            num_days = 29
-    elif (a == 12 and leap != 0):
-            num_days = 28
-        
-    else:
-        num_days = 30
-#Next determine which months have 31 days and which have less.
-
-    while b > num_days:
-        b = eval(input('Please enter the day of the month you want to return: '))
-
-#r = 0 is Sunday, r == 1, is Monday
-    c = c%100
-    d = c//100
-    w = (13*a-1)//5
-    x = c//4
-    y = d//4
-    z = w + x + y + b + c - 2 * d
-    r = z%7
-    r = (r+7)%7
-
-
-
-    if r == 0:
-        r = 'Sunday'
-    if r == 1:
-       r = 'Monday'
-    if r == 2:
-       r= 'Tursday'
-    if r == 3:
-       r= 'Wednesday'   
-    if r == 4:
-       r = 'Thursday'
-    if r == 5:
-       r = 'Friday'
-    if r == 6:
-       r = 'Saturday'
-
-    if a==1:
-        a = 'March'
-    if a==2:
-        a='April'
-    if a==3:
-        a='May'
-    if a==4:
-        a='June'
-    if a==5:
-        a='July'
-    if a==6:
-        a='August'
-    if a==7:
-        a='September'
-    if a==8:
-        a ='October'
-    if a==9:
-        a ='November'
-    if a==10:
-        a= 'December'
-    if a==11:
-        a='January'
-    if a==12:
-        a='February'
-
-    print('\n You are returning on', r, 'the',b,'of', a, h)
-
-def leave():
+#leaving dates
+def main():
     c =h= eval(input('Please enter the year:'))
     
 # c can only be in the range of 1900-2100 and represents the year
@@ -205,4 +101,193 @@ def leave():
     if a==12:
         a='February'
 
-    leave = print('You are leaving on', r ,'the',b,'of', a, h)
+
+# Calculating the return trip dates
+    c_1 =h_1= eval(input('Please enter the year you wish to return:'))
+    
+# c can only be in the range of 1900-2100 and represents the year
+
+    while (c_1 <1900) or (c_1>2100):
+           c_1 = eval(input('Please enter the year you wish to return: '))
+    
+# a represents the month
+# a == 1 is March, a == 2 is April... etc
+
+    a_1 = eval(input('Please enter the month you want to return: '))
+    while (a_1 > 12) or (a_1 < 1):
+           a_1 = eval(input('Please enter the month you want to return:'))
+# b = the calander date #
+    
+    b_2 = eval(input('Please enter the day of the month you want to return: '))
+
+
+#Determine if there is a leap year
+    
+
+# Ex: 1929, C = 29, d = 19
+
+    leap_1 = (c_1% 4 == 0) or (c_1% 400 != 0 and (c_1%100 == 0))
+
+# calculate months
+
+    num_days_1 = 0
+    
+    if a_1< 3:
+        a_1 += 10
+    else:
+        a_1-= 2
+        
+    if (a_1 == 1) or (a_1 == 3) or (a_1 == 5) or (a_1 == 6) or (a_1 == 7) or (a_1 == 8) or (a_1 ==10) or (a_1 == 12):
+            num_days_1 = 31
+            
+    elif ( a_1 == 12 and leap_1 == 0):
+            num_days_1 = 29
+    elif (a_1 == 12 and leap_1 != 0):
+            num_days_1 = 28
+        
+    else:
+        num_days_1 = 30
+#Next determine which months have 31 days and which have less.
+
+    while b_2 > num_days_1 or (b_2 == b):
+        b_2 = eval(input('Please enter the day of the month you want to return: '))
+
+#r = 0 is Sunday, r == 1, is Monday
+    c_1 = c_1%100
+    d_1 = c_1//100
+    w_1 = (13*a_1-1)//5
+    x_1 = c_1//4
+    y_1 = d_1//4
+    z_1 = w_1 + x_1 + y_1 + b_2 + c_1 - 2 * d_1
+    r_1 = z_1%7
+    r_1 = (r_1+7)%7
+
+
+
+    if r_1 == 0:
+        r_1 = 'Sunday'
+    if r_1 == 1:
+       r_1 = 'Monday'
+    if r_1 == 2:
+       r_1 = 'Tursday'
+    if r_1 == 3:
+       r_1 = 'Wednesday'   
+    if r_1 == 4:
+       r_1 = 'Thursday'
+    if r_1 == 5:
+       r_1 = 'Friday'
+    if r_1 == 6:
+       r_1 = 'Saturday'
+
+    if a_1==1:
+        a_1 = 'March'
+    if a_1==2:
+        a_1='April'
+    if a_1==3:
+        a_1='May'
+    if a_1==4:
+        a_1='June'
+    if a_1==5:
+        a_1='July'
+    if a_1==6:
+        a_1='August'
+    if a_1==7:
+        a_1='September'
+    if a_1==8:
+        a_1 ='October'
+    if a_1==9:
+        a_1 ='November'
+    if a_1==10:
+        a_1= 'December'
+    if a_1==11:
+        a_1='January'
+    if a_1==12:
+        a_1='February'
+
+    print('\n' *5)
+    print('Confirmation dates:')
+    print('You are leaving on',r ,'the',b,'of', a, h)
+    print('You are returning on',r_1 ,'the',b_2,'of', a_1, h_1)
+
+    print('\n'*5)
+    response_1 = input("Are these dates correct? ")
+
+    #Need to check if correct dates
+
+    if (response_1 == 'yes') or (response_1== 'Yes'):
+
+        #Need to determine airline seats and pricing information'
+        print('\n'*5)
+
+        print('Please note the following: Rows A-E are considered 1st class, \neverything after is coach. \nSeats 0 and 3 are window seats the others are asiles.')
+        print('\n'*5)
+
+        #A visual of seating to select from
+
+        #1st class seating
+        #65 because of its ASCII value
+        num = 65
+
+        #to account for spacing
+        space =2*6-2
+
+        #To account for # of rows
+        for i in range(1,6):
+
+            # To account for the spacing between columns
+            for j in range(0,space):
+                print(end = ' ')
+
+            # of columns
+            for j in range (0,2):
+
+                #convernt the ASCII to a character
+
+                char=chr(num)
+
+                print(char,+j, end="     ")
+
+            num+=1
+            print('\r')
+
+        #Now to visualize the economy seating
+
+        num = 70
+
+        for i in range (1,6):
+            for j in range(0,4):
+                char=chr(num)
+                print(char,+j, end="      ")
+            num+=1
+            print('\r')
+
+        print('\n' * 5)
+
+        response_2 = input('Please select which seat you would like: ').upper()
+
+        if (response_2 == 'A0') or (response_2 == 'A1') or (response_2 == 'B0') or (response_2 == 'B1') or (response_2 == 'C0') or (response_2 == 'C1') or (response_2 == 'D0') or (response_2 == 'D1') or (response_2 == 'E0') or (response_2 == 'E1'):
+
+            print('\n' * 5)
+            print("You've selected the 1st class seating,",response_2, 'this will be $700')
+            print('Confirmation dates:','\n'*5)
+            print('You are leaving on',r ,'the',b,'of', a, h)
+            print('You are returning on',r_1 ,'the',b_2,'of', a_1, h_1)
+
+        else:
+            print('\n' * 5)
+            print("You've selected the economy,",response_2, 'this will be $215')
+            print('Confirmation dates:','\n'*5)
+            print('You are leaving on',r ,'the',b,'of', a, h)
+            print('You are returning on',r_1 ,'the',b_2,'of', a_1, h_1)
+
+
+
+            
+
+    
+
+
+main()    
+
+    
+          
